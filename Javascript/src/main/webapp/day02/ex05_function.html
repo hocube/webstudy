@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function() : 함수</title>
+<script type="text/javascript">
+// 함수를 먼저 만들어놓고 그 다음에 읽음.
+// 마지막껏만 살아남아서 다 Hello가 나옴.
+
+// 선언함수가 먼저 만들어지고 나중에 실행된다.
+test1();   //여기도 hello/ 객체 생성 안했는데도 찍을 수 있음.
+function test1() {
+	document.write("Hi~~~~<br>");
+}
+test1(); // 여기도 hello
+function test1() {
+	document.write("Hello!!!<br>");
+}
+test1(); //여기도 hello
+document.write("<hr>");
+</script>
+
+
+
+<script type="text/javascript">
+// test1(); 호출가능
+
+// 익명 함수는 선언 함수와 다르게 실행할 때 만들어진다. 
+// test2(); 오류발생
+var test2 = function() {
+	document.write("Hi~~~~<br>");
+}
+test2();
+var test2 = function() {
+	document.write("Hello!!!<br>")
+}
+test2();
+document.write("<hr>");
+</script>
+
+<script type="text/javascript">
+test3();
+function test3() {
+	document.write("Hi^^ <br>");
+}
+test3();
+var test3 = function() {
+	document.write("Hello^^ <br>");
+}
+test3();
+document.write("<hr>");
+</script>
+
+<script type="text/javascript">
+	test4();
+	var test4 = function() {
+	document.write("Hello@@ <br>");
+	}
+	test4();
+	function test4() {
+		document.write("Hi@@ <br>");
+	}
+	test4();
+	document.write("<hr>");
+</script>
+</head>
+<body>
+</body>
+</html>
